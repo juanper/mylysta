@@ -2,5 +2,5 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
-  - init: 'curl -sSf sh.rustup.rs | sh -s -- -y'
-    
+  - init: 'curl -sSf sh.rustup.rs | sh -s -- -y && echo "export PATH=~/.cargo/bin:$PATH" >> ~/.bashrc && export PS1='\u:\w$ '" >> ~/.bashrc'
+  
